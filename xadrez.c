@@ -1,6 +1,8 @@
 #include <stdio.h>
-int main(){
-    int torre = 0;
+
+void Loops (int casas){
+    if (casas > 0)
+    { int torre = 0;
     int bispo = 0;
     int rainha = 0;
     int cavalo = 1;
@@ -26,7 +28,7 @@ printf("Bispo:\n");
         printf("cima\n");
         bispo++;
 
-    } while (bispo <=5);
+    } while (bispo <=4);
 
 printf("\n");
     
@@ -38,9 +40,20 @@ printf("Cavalo:\n");
             printf("Cima\n");
         }
     printf("Esquerda\n");    
+       
+    Loops (casas - 1);
+    
+
+    }
+    
         
     }
     
+}
+
+
+int main(){
+    Loops(1);
 
     
     return 0;
